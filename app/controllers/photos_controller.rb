@@ -1,16 +1,16 @@
 class PhotosController < ApplicationController
 
   def edit_form
-    @photos = Photo.find_by({ :id => params["id"] })
+    @photo = Photo.find(params[:id])
   end
 
   def update_row
-    # @photos = Photo.find_by({ :id => params["id"] })
+    @photo = Photo.find(params[:id])
 
-    # @photo.source = params["the_source"]
-    # @photo.caption = params["the_caption"]
+    @photo.caption = params["the_caption"]
+    @photo.source = params["the_source"]
 
-    # @photo.save
+    @photo.save
   end
 
   def create_row

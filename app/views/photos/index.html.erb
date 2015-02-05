@@ -11,16 +11,16 @@
   <% @list_of_photos.each do |photo| %>
   <tr>
     <td>
-      <img src="<%= photo.source %>" width="80">
+      <img src="<%= photo.source %>" width="80" Hspace="15" Vspace="5">
     </td>
     <td>
       <%= photo.caption %>
     </td>
     <td>
-      <a href="http://localhost:3000/photos/<%= photo.id %>">Show</a>
+      <a href="http://localhost:3000/photos/<%= photo.id %>">Show</a>  |
     </td>
     <td>
-      <a href="http://localhost:3000/photos/<%= photo.id %>/edit">Edit</a>
+      <a href="http://localhost:3000/photos/<%= photo.id %>/edit">Edit</a>  |
     </td>
     <td>
       <a href="http://localhost:3000/delete_photo/<%= photo.id %>">Delete</a>
